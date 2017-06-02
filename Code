@@ -1,0 +1,77 @@
+stage.set_background_color("paleturquoise")
+
+cat1 = codesters.Sprite("blackcat")
+
+cat1.say("Are you ready?")
+
+stage.wait(2)
+
+cat1.hide()
+
+random_num_1 = random.randint(1,10)
+
+random_num_2 = random.randint(1,10)
+
+random_num_3 = random.randint(1,10)
+
+sequence = str(random_num_1) + str(random_num_2) + str(random_num_3)
+
+num_text = str(random_num_1)
+
+text = codesters.Text(num_text, 0, 0, "black")
+
+stage.wait(1)
+
+text.hide()
+
+cat = codesters.Sprite("cat", 0, 0)
+
+stage.wait(.5)
+
+cat.hide()
+
+stage.wait(2)
+
+num_text = str(random_num_2)
+
+text = codesters.Text(num_text, 0, 0, "black")
+
+stage.wait(1)
+
+text.hide()
+
+cat = codesters.Sprite("cat", 0, 0)
+
+stage.wait(.5)
+
+cat.hide()
+
+stage.wait(2)
+
+num_text = str(random_num_3)
+
+text = codesters.Text(num_text, 0, 0, "black")
+
+stage.wait(1)
+
+text.hide()
+
+cat = codesters.Sprite("cat", 0, 0)
+
+stage.wait(.5)
+
+cat.hide()
+
+stage.wait(2)
+
+cat = codesters.Sprite("cat", 0, 0)
+
+user_guess = cat.ask("Enter the 3 numbers you saw with no spaces in between them. Ex. 123")
+
+if user_guess == sequence:
+    cat.set_say_color("purple")
+    cat.say("You won!")
+
+if user_guess != sequence:
+    cat.set_say_color("red")
+    cat.say("You lost! Try Again!")
